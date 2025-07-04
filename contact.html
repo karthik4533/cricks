@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cricket Sports Equipment</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Crick Sports Equipment</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login method.html">Login</a>
+            <a href="payment.html">Cart</a>
+            <a href="check.html">Checkout</a>
+            <a href="search and filter.html">Product</a>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form id="contact-form" action="submit-contact.php" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" id="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Crick Sports Equipment. All rights reserved.</p>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

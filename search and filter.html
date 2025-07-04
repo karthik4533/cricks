@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog - Cricket Sports Equipment</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Crick Sports Equipment</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login method.html">login</a></li>
+                <li><a href="about it.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="check.html">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Filters and Search Section -->
+    <section class="filters">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+        </div>
+        <div class="filter-container">
+            <label for="categoryFilter">Category:</label>
+            <select id="categoryFilter" onchange="filterProducts()">
+                <option value="">All</option>
+                <option value="bat">Bats</option>
+                <option value="ball">Balls</option>
+                <option value="gloves">Gloves</option>
+                <option value="helmet">Helmets</option>
+                <option value="Football">Football</option>
+                <option value="Hockey">Hockey</option>
+                <option value="Tennis">Tennis</option>
+            </select>
+            <br>
+
+            <div class="filter-price">
+                <label for="price">Price Range</label>
+                <select id="price" onchange="filterProducts()">
+                    <option value="">All</option>
+                    <option value="0-20">Under 1000</option>
+                    <option value="20-40">1000 - 2000</option>
+                    <option value="40-60">2000 - 2500</option>
+                    <option value="40-60">2500 - 3000</option>
+                    <option value="40-60">3000 - 3500</option>
+                </select>
+            </div>
+
+            <div class="filter-availability">
+                <label for="availability">Availability</label>
+                <select id="availability" onchange="filterProducts()">
+                    <option value="">All</option>
+                    <option value="in-stock">In Stock</option>
+                    <option value="out-of-stock">Out of Stock</option>
+                </select>
+            </div>
+    </section>
+           </div>
+           </section>
+           
+
+    <!-- Product Catalog Section -->
+    <section class="catalog-container">
+        <form action="payment.html">
+        <h2>Crick Sports Equipment</h2>
+        <div class="products" id="productList">
+            <!-- Product 1 -->
+            <div class="product" data-category="bat" data-price="120">
+                <img src="bats.jpg" alt="Cricket Bat">
+                <h3>Cricket Bat</h3>
+                <p class="description">High-quality wooden cricket bat for professional use.</p>
+                <p class="price">2500.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product" data-category="ball" data-price="15">
+                <img src="balls.jpg" alt="Cricket Ball">
+                <h3>Cricket Ball</h3>
+                <p class="description">Durable leather cricket ball for practice and matches.</p>
+                <p class="price">550.00</p>
+                <button class="add-to-cart" >Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product" data-category="gloves" data-price="25">
+                <img src="gloves.jpg" alt="Cricket Gloves">
+                <h3>Batting Gloves</h3>
+                <p class="description">Protective gloves for cricket players, ensuring a firm grip.</p>
+                <p class="price">1450.00</p>
+                <button class="add-to-cart"  >Add to Cart</button>
+            </div>
+            <div class="product" data-category="pads" data-price="25">
+                <img src="pads.jpg" alt="Cricket Batting Pads">
+                <h3> Batting Pads</h3>
+                <p class="description">Protective Pads for cricket players, ensuring a firm grip.</p>
+                <p class="price">2450.00</p>
+                <button class="add-to-cart"  >Add to Cart</button>
+            </div>
+            <div class="product" data-category="pads" data-price="25">
+                <img src="wkpads.jpg" alt="Cricket Wicketkeeping Pads">
+                <h3> Wicketkeeping Pads</h3>
+                <p class="description">Protective Pads for cricket players, ensuring a firm grip.</p>
+                <p class="price">1050.00</p>
+                <button class="add-to-cart"  >Add to Cart</button>
+            </div>
+            <div class="product" data-category="helmet" data-price="25">
+                <img src="helmet.png" alt="Cricket helmet">
+                <h3>Cricket helmet</h3>
+                <p class="description">Protective helmet for cricket players, ensuring a firm grip.</p>
+                <p class="price">1450.00</p>
+                <button class="add-to-cart" >Add to Cart</button>
+            </div>
+            <div class="product" data-category="kitbag" data-price="25">
+                <img src="kitbag.avif" alt="Cricket Gloves">
+                <h3>Cricket Kit</h3>
+                <p class="description">Protective kitbag for cricket players, ensuring a firm grip.</p>
+                <p class="price">1500.00</p>
+                <button class="add-to-cart" >Add to Cart</button>
+            </div>
+            <div class="product" data-category="football" data-price="25">
+                <img src="football.jpg" alt="football">
+                <h3>Football</h3>
+                <p class="description"> Football is a game that millions of people around the world play and love.</p>
+                <p class="price">999.00</p>
+                <button class="add-to-cart" >Add to Cart</button>
+            </div>
+            <div class="product" data-category="pads" data-price="25">
+                <img src="fb pads.jpg" alt="Football Goalkeeping Gloves">
+                <h3> Goalkeeping Gloves</h3>
+                <p class="description">Protective Gloves for Football players, ensuring a firm grip.</p>
+                <p class="price">2190.00</p>
+                <button class="add-to-cart"  >Add to Cart</button>
+            </div>
+            <div class="product" data-category="pads" data-price="25">
+                <img src="fb.jpg" alt="Goalkeeping Pads">
+                <h3> Football Pads</h3>
+                <p class="description">Protective Pads for Football players, ensuring a firm grip.</p>
+                <p class="price">1950.00</p>
+                <button class="add-to-cart"  >Add to Cart</button>
+            </div>
+            <div class="product" data-category="football kit" data-price="25">
+                <img src="footkit.jpg" alt="football kit">
+                <h3>Football kit</h3>
+                <p class="description"> the standard equipment and attire worn by Players</p>
+                <p class="price">1999.00</p>
+                <button class="add-to-cart" >Add to Cart</button>
+            </div>
+            <div class="product" data-category="stick" data-price="25">
+                <img src="stick.jpeg" alt="Hockey stick">
+                <h3>Hockey stick</h3>
+                <p class="description">he sport where people skate on ice and use big hockey sticks to whack a puck into a goal.</p>
+                <p class="price">1500.00</p>
+                <button class="add-to-cart" >Add to Cart</button>
+            </div>
+            <div class="product" data-category="kitbag" data-price="25">
+                <img src="hockeykit.jpg" alt="hockeykit">
+                <h3>Hockey kit</h3>
+                <p class="description">the standard equipment and attire worn by Players</p>
+                <p class="price">1899.00</p>
+                <button class="add-to-cart" >Add to Cart</button>
+            </div>
+            <div class="product" data-category="kitbag" data-price="25">
+                <img src="tennis.jpeg" alt="Tennis">
+                <h3>Tennis bat</h3>
+                <p class="description">A racket sport that is played either individually against a single opponent</p>.</p>
+                <p class="price">1199.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-category="kitbag" data-price="25">
+                <img src="tenniskit.jpeg" alt="Tennis kit">
+                <h3>Tennis kit</h3>
+                <p class="description">the standard equipment and attire worn by Players.</p>
+                <p class="price">1500.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-category="gloves" data-price="25">
+                <img src="wicketkeeping.jpg" alt="wicketkeeping gloves">
+                <h3>Wicket keeping Gloves</h3>
+                <p class="description">Protective gloves for cricket players, ensuring a firm grip.</p>
+                <p class="price">2299.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-category="gloves" data-price="25">
+                <img src="fshoes.jpeg" alt="Football shoes">
+                <h3>Football shoes</h3>
+                <p class="description">Protective shoes for Football players, ensuring a firm grip.</p>
+                <p class="price">1999.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-category="gloves" data-price="25">
+                <img src="shoes.jpeg" alt="Cricket shoes">
+                <h3>Cricket shoes</h3>
+                <p class="description">Protective shoes for cricket players, ensuring a firm grip.</p>
+                <p class="price">1799.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-category="gloves" data-price="25">
+                <img src="ashoes.avif" alt="sports shoes">
+                <h3>Sports shoes</h3>
+                <p class="description">Protective shoes for athletics players, ensuring a firm grip.</p>
+                <p class="price">2000.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-category="pads" data-price="25">
+                <img src="stump.jpg" alt="Cricket Stump">
+                <h3>Cricket Stump</h3>
+                <p class="description">Protective Gear Protective gear has an important role in cricket games.</p>
+                <p class="price">990.00</p>
+                <button class="add-to-cart"  >Add to Cart</button>
+            </div>
+            <script src="search and filter.js"></script>
+             </div>
+             </form>
+             </section>
+             </body>
+             </html>

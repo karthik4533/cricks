@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Cricket Sports Equipment</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Cricket Equipment</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="project file.html">Home</a></li>
+                <li><a href="product details.html">Catalog</a></li>
+                <li><a href="checkout process.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Checkout Form -->
+    <section class="checkout-container">
+        <h2>Checkout</h2>
+        <form id="checkoutForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Shipping Address:</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="cardNumber">Credit Card Number:</label>
+                <input type="text" id="card" name="Credit" required>
+                <div id="card-element">
+                    <!-- A Stripe Element will be inserted here. -->
+                </div>
+                <div id="card-errors" role="alert"></div>
+            </div>
+
+            <button type="submit" id="submit-btn" class="submit-btn">Place Order</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Cricket Sports Equipment Management. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Include Stripe.js -->
+    <script src="payment gateway.js"></script>
+    <script src="checkout2.js"></script>
+</body>
+</html>

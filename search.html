@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog - Cricket Sports Equipment</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Cricket Sports Equipment</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Catalog</a>
+            <a href="#">Cart</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="search-filter-container">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search products..." oninput="filterProducts()">
+        </div>
+
+        <div class="filters">
+            <h3>Filter by:</h3>
+            <div class="filter-category">
+                <label for="category">Category</label>
+                <select id="category" onchange="filterProducts()">
+                    <option value="">All</option>
+                    <option value="bat">Bats</option>
+                    <option value="ball">Balls</option>
+                    <option value="helmet">Helmets</option>
+                    <option value="pads">Pads</option>
+                    <option value="pads">Football</option>
+                    <option value="pads">Hockey</option>
+                    <option value="pads">Tennis</option>
+                </select>
+            </div>
+
+            <div class="filter-price">
+                <label for="price">Price Range</label>
+                <select id="price" onchange="filterProducts()">
+                    <option value="">All</option>
+                    <option value="0-20">Under 520</option>
+                    <option value="20-40">520 - 840</option>
+                    <option value="40-60">840 - 1060</option>
+                </select>
+            </div>
+
+            <div class="filter-availability">
+                <label for="availability">Availability</label>
+                <select id="availability" onchange="filterProducts()">
+                    <option value="">All</option>
+                    <option value="in-stock">In Stock</option>
+                    <option value="out-of-stock">Out of Stock</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="catalog-container">
+        <h2>Our Products</h2>
+
+        <div class="product-grid" id="product-grid">
+            <!-- Product cards will go here -->
+            <div class="product-card" data-category="bat" data-price="50" data-availability="in-stock">
+                <img src="bats.jpg" alt="Cricket Bat">
+                <h3>Cricket Bat</h3>
+                <p class="description">High-quality wooden cricket bat. Ideal for all levels of play.</p>
+                <span class="price">$50</span>
+                <span class="availability">In Stock</span>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="standard">Standard</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="ball" data-price="25" data-availability="in-stock">
+                <img src="balls.jpg" alt="Cricket Ball">
+                <h3>Cricket Ball</h3>
+                <p class="description">Durable cricket ball, perfect for practice and competitive matches.</p>
+                <span class="price">$25</span>
+                <span class="availability">In Stock</span>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="standard">Standard</option>
+                    <option value="premium">Premium</option>
+                </select>
+
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="helmet" data-price="30" data-availability="out-of-stock">
+                <img src="helmet.png" alt="Cricket Helmet">
+                <h3>Cricket Helmet</h3>
+                <p class="description">Lightweight and strong helmet offering maximum protection.</p>
+                <span class="price">$30</span>
+                <span class="availability">Out of Stock</span>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <button class="add-to-cart" disabled>Out of Stock</button>
+            </div>
+
+            <div class="product-card" data-category="pads" data-price="35" data-availability="in-stock">
+                <img src="pads.jpg" alt="Cricket Pads">
+                <h3>Cricket Pads</h3>
+                <p class="description">Comfortable and protective cricket pads for your legs.</p>
+                <span class="price">2035</span>
+                <span class="availability">In Stock</span>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="standard">Standard</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <button class="add-to-cart">Add to Cart</button>
+                
+            <div class="product-card" data-category="pads" data-price="35" data-availability="in-stock">
+                <img src="kitbag.avif" alt="Cricket kit">
+                <h3>Cricket kit</h3>
+                <p class="description">Comfortable and protective cricket pads for your legs.</p>
+                <span class="price">2099</span>
+                <span class="availability">In Stock</span>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="standard">Standard</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card" data-category="Gloves" data-price="35" data-availability="in-stock">
+                <img src="gloves.jpg" alt="Cricket Gloves">
+                <h3>Cricket Gloves</h3>
+                <p class="description">Comfortable and protective cricket pads for your legs.</p>
+                <span class="price">1099</span>
+                <span class="availability">In Stock</span>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="standard">Standard</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card" data-category="Football" data-price="35" data-availability="in-stock">
+                <img src="football.jpg" alt="Football">
+                <h3>Football</h3>
+                <p class="description">Comfortable and protective cricket pads for your legs.</p>
+                <span class="price">999</span>
+                <span class="availability">In Stock</span>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="standard">Standard</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card" data-category="Football kit" data-price="35" data-availability="in-stock">
+                <img src="footkit.jpg" alt="Cricket Pads">
+                <h3>Football kit</h3>
+                <p class="description">Comfortable and protective cricket pads for your legs.</p>
+                <span class="price">2899</span>
+                <span class="availability">In Stock</span>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="standard">Standard</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card" data-category="Hockey stick" data-price="35" data-availability="in-stock">
+                <img src="stick.jpeg" alt="Hockey stick">
+                <h3>Hockey stick</h3>
+                <p class="description">Comfortable and protective cricket pads for your legs.</p>
+                <span class="price">1299</span>
+                <span class="availability">In Stock</span>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="standard">Standard</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Hockey kit" data-price="35" data-availability="in-stock">
+                <img src="hockeykit.jpg" alt="Hockey kit">
+                <h3>Hockey kit</h3>
+                <p class="description">Comfortable and protective cricket pads for your legs.</p>
+                <span class="price">1299</span>
+                <span class="availability">In Stock</span>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="standard">Standard</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Tennis" data-price="35" data-availability="in-stock">
+                <img src="tennis.jpeg" alt="Tennis">
+                <h3>Tennis</h3>
+                <p class="description">Comfortable and protective cricket pads for your legs.</p>
+                <span class="price">1199</span>
+                <span class="availability">In Stock</span>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="standard">Standard</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="tenniskit" data-price="35" data-availability="in-stock">
+                <img src="tenniskit.jpeg" alt="tenniskit">
+                <h3>Tenniskit</h3>
+                <p class="description">Comfortable and protective cricket pads for your legs.</p>
+                <span class="price">1999</span>
+                <span class="availability">In Stock</span>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="standard">Standard</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Cricket Sports Equipment. All rights reserved.</p>
+    </footer>
+
+    <script src="search.js"></script>
+</body>
+</html>
